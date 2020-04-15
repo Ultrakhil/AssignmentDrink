@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="134dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/countryName1"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:text="Drink"
+                android:textColor="#F44336"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#009688"
+                app:layout_constraintEnd_toStartOf="@id/countryName1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            //android:src="@drawable/search"
+            app:layout_constraintEnd_toStartOf="@id/countryName1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:id="@+id/categoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:text="Category"
+                android:textColor="#000000"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/countryName1" />
+            //android:fontFamily="@font/amiko_bold"
+            android:text="Region"
+            android:textColor="#000000"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/countryName1" />
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="184dp"
+                android:layout_height="wrap_content"
+                android:text="Category Field"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@id/categoryLabel"
+                app:layout_constraintTop_toBottomOf="@id/categoryLabel"
+                tools:ignore="MissingConstraints" />
+            //android:fontFamily="@font/amiko"
+            android:text="Region Text"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/regionLabel"
+            app:layout_constraintTop_toBottomOf="@id/regionLabel" />
+
+            <ImageView
+                android:id="@+id/drinkImage"
+                android:layout_width="164dp"
+                android:layout_height="164dp"
+                android:layout_marginEnd="16dp"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/categoryLabel" /><![CDATA[
+
+
+            //android:fontFamily="@font/amiko_bold"
+            android:text="Capital"
+            android:textColor="#000000"
+            android:textSize="26dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/region" />
+
+
+
+            //android:fontFamily="@font/amiko"
+            android:text="capital city"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/capitalTitle" />
+
+            ]]>
+
+            <TextView
+                android:id="@+id/drinkTypeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:text="Drink Type"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/category" />
+            //android:fontFamily="@font/amiko_bold"
+            android:text="Currencies"
+            android:textColor="#000000"
+            android:textSize="26dp"
+            app:layout_constraintStart_toStartOf="@id/capital"
+            app:layout_constraintTop_toBottomOf="@id/capital" />
+
+            <TextView
+                android:id="@+id/drink"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:text="Drink Text"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@id/drinkTypeTitle"
+                app:layout_constraintTop_toBottomOf="@id/drinkTypeTitle" />
+            //android:fontFamily="@font/amiko"
+            android:text="Currencies Text"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/currenciesTitle"
+            app:layout_constraintTop_toBottomOf="@id/currenciesTitle" />
+
+
+            <TextView
+                android:id="@+id/glassTypeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="Glass Type"
+                android:textColor="#000000"
+                android:textSize="26sp"
+                app:layout_constraintStart_toStartOf="@id/drink"
+                app:layout_constraintTop_toBottomOf="@id/drink" />
+            //android:fontFamily="@font/amiko_bold"
+            android:text="Population"
+            android:textColor="#000000"
+            android:textSize="26dp"
+            app:layout_constraintStart_toStartOf="@id/currencies"
+            app:layout_constraintTop_toBottomOf="@id/currencies" />
+
+            <TextView
+                android:id="@+id/glass"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:text="Glass Text"
+                android:textColor="#000000"
+                app:layout_constraintStart_toStartOf="@id/glassTypeTitle"
+                app:layout_constraintTop_toBottomOf="@id/glassTypeTitle" />
+            //android:fontFamily="@font/amiko"
+            android:text="Population of country"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@id/populationTitle"
+            app:layout_constraintTop_toBottomOf="@id/populationTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:onClick="hide"
+    tools:context=".QuizFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="592dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:background="#F8C21F"
+            android:gravity="center"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="What is your question?     Insert Here"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            app:autoSizeMaxTextSize="30sp"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <ImageView
+            android:id="@+id/flagquestion"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question"></ImageView>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/answer"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:hint="Your Answer"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@id/streak"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question"></com.google.android.material.textfield.TextInputEditText>
+
+        <TextView
+            android:id="@+id/streak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Streak:"
+            android:textColor="#89ED82"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/score"
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#FFC107"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/streak"></TextView>
+
+
+        <Button
+            android:id="@+id/check"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="30dp"
+            android:background="#42A5F5"
+            android:text="Check"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@id/score"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

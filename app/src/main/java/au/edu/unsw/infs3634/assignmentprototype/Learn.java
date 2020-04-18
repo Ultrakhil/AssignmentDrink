@@ -60,7 +60,7 @@ public class Learn extends Fragment {
 
         //Url for API for all countries
         final RequestQueue requestQueue =  Volley.newRequestQueue(getActivity());
-        String url = "https://restcountries.eu/rest/v2/all";
+        String url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a";
 
         Response.Listener<String> responseListener = new Response.Listener<String>() {
 
@@ -70,14 +70,14 @@ public class Learn extends Fragment {
                 //Pull data, parse it and store in db
                 Gson gson = new Gson();
                 Drink[] drinks = gson.fromJson(response, Drink[].class);
-                List<Drink> countryList = Arrays.asList(drinks);
+                List<Drink> drinkList = Arrays.asList(drinks);
 
-                CountryDatabase db = Room.databaseBuilder(getContext(), CountryDatabase.class , "database_name").allowMainThreadQueries().build();
+                DrinkDatabase db = Room.databaseBuilder(getContext(), DrinkDatabase.class , "database_name").allowMainThreadQueries().build();
 
-                db.countryDao().deleteTable();
-                db.countryDao().insert(countryList);
+                db.drinkDao().deleteTable();
+                db.drinkDao().insert(drinkList);
 
-                drinkAdapter.setData(db.countryDao().getCountry());
+                drinkAdapter.setData(db.drinkDao().getDrink());
                 recyclerView.setAdapter(drinkAdapter);
             }
 

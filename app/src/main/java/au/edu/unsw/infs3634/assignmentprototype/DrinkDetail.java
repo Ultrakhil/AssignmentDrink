@@ -72,7 +72,7 @@ public class DrinkDetail extends AppCompatActivity {
         GlideToVectorYou.justLoadImage(this, Uri.parse(url), image);
 
         //Request to api
-        final String currencyRequestUrl = "" + drink.getName();
+        final String currencyRequestUrl = "hhttps://www.thecocktaildb.com/api/json/v1/1/search.php?f=a" + drink.getName();
 
         final RequestQueue requestQueue =  Volley.newRequestQueue(this);
 

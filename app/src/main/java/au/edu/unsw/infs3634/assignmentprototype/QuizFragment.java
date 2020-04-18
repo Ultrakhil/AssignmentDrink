@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.room.Room;
 
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -15,6 +16,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou;
 
 import java.util.List;
 import java.util.Random;
@@ -75,7 +78,7 @@ public class QuizFragment extends Fragment {
 
             String url = drinkBank.get(drinkRandom).getImage();
 
-            //Load image for flag question
+            //Load image for image question
             GlideToVectorYou.justLoadImage(getActivity(), Uri.parse(url), drink);
 
             answers[0] = drinkBank.get(drinkRandom).getName();

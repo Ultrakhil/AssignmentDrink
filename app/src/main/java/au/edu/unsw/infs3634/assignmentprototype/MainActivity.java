@@ -5,19 +5,41 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    EditText e1;
+    private EditText Name;
+    private EditText Password;
+    private Button Login;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        e1 = (EditText)findViewById(R.id.username);
+        Name = (EditText)findViewById(R.id.username);
+        Password = (EditText)findViewById(R.id.password);
+        Login = (Button)findViewById(R.id.btn_login);
+
+        Login.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                validate(Name.getText().toString(), Password.getText().toString());
+            }
+        });
     }
-    public void doSomething(View view){
-        Intent i1 = new Intent(this, HomePage.class);
-        i1.putExtra("user",e1.getText().toString());
-        startActivity(i1);
+    private void validate(String userName, String userPassword){
+        if((userName == "Admin") && (userPassword == "1234")){
+            Intent intent = new Intent(MainActivity.this, HomePage.class);
+             startActivity(intent);
+
+        }else{
+            Login.setEnabled(false);
+
+        }
+
     }
+
 }
